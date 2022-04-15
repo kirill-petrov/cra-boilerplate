@@ -1,10 +1,9 @@
 import React from 'react';
-import './App.css';
 
-function App(props) {
+function App() {
   return (
     <div>
-      <h1>create-react-app</h1>
+      <pre>the react-app is running</pre>
     </div>
   );
 }

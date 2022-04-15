@@ -1,28 +1,36 @@
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: './src/index.jsx',
   output: {
-    path: path.join(__dirname, "/dist"),
-    filename: "bundle.js"
+    path: path.join(__dirname, '/dist'),
+    filename: 'bundle.js',
+  },
+  resolve: {
+    extensions: ['.jsx', '.js'],
   },
   module: {
     rules: [
       {
         test: /\.jsx?$/,
+        use: ['babel-loader'],
         exclude: /node_modules/,
-        use: ["babel-loader"]
       },
       {
         test: /\.css$/,
-        use: ["style-loader", "css-loader"]
-      }
-    ]
+        use: ['style-loader', 'css-loader'],
+      },
+    ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./public/index.html"
-    })
-  ]
+      template: './public/index.html',
+    }),
+    new Dotenv(),
+  ],
+  devServer: {
+    historyApiFallback: true,
+  },
 };
