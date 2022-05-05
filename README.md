@@ -1,4 +1,6 @@
-# Create a react app without using the create-react-app command
+# Стартовый шаблон
+
+## Eсли клонировал с SSH
 
 Cкопировать всё из папки cra-boilerplate в текущую папку
 
