@@ -1,8 +1,8 @@
 # Стартовый шаблон
 
-> Download ZIP
+> [Download ZIP](https://github.com/kirill-petrov/cra-boilerplate/archive/refs/heads/main.zip)
 
-## Eсли клонировал с SSH
+### Eсли клонировал с SSH 🤦‍♂️
 
 Cкопировать всё из папки cra-boilerplate в текущую папку
 
